@@ -1,1 +1,7 @@
 /app/google-services.json
+/secrets.properties
+/local.properties
+/gradlew.bat
+/gradlew
+/gradle.properties
+/app/proguard-rules.pro

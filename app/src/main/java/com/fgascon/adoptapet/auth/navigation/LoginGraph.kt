@@ -14,12 +14,12 @@ import com.fgascon.adoptapet.core.navigation.Screens
 
 @Composable
 fun LoginGraph(
-    parentNavController: NavHostController,
-    loginNavController: NavHostController = rememberNavController()
+    onUserLoggedIn: () -> Unit,
+    navController: NavHostController = rememberNavController(),
 ) {
 
     NavHost(
-        navController = loginNavController,
+        navController = navController,
         startDestination = Screens.LoginScreen.route,
     ) {
 
@@ -29,10 +29,10 @@ fun LoginGraph(
                 state = viewModel.state.collectAsState(),
                 onEvent = { viewModel.onEvent(it) },
                 onUserRegistered = {
-                    loginNavController.navigate(Screens.LoginScreen.route)
+                    navController.navigate(Screens.LoginScreen.route)
                 },
                 onNavigateBack = {
-                    loginNavController.popBackStack()
+                    navController.popBackStack()
                 },
             )
         }
@@ -42,10 +42,10 @@ fun LoginGraph(
                 state = viewModel.state.collectAsState(),
                 onEvent = { viewModel.onEvent(it) },
                 onUserLoggedIn = {
-                    parentNavController.navigate(Screens.MainGraph.route)
+                    onUserLoggedIn()
                 },
                 onNavigateToRegister = {
-                    loginNavController.navigate(Screens.RegisterScreen.route)
+                    navController.navigate(Screens.RegisterScreen.route)
                 },
             )
         }

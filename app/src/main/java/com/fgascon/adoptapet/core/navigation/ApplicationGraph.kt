@@ -19,18 +19,22 @@ fun ApplicationGraph(
     ) {
         composable(route = Screens.SplashScreen.route) {
             SplashScreen {
-                navController.navigate(Screens.MainGraph.route){
-                    popUpTo(Screens.SplashScreen.route){
+                navController.navigate(Screens.MainGraph.route) {
+                    popUpTo(Screens.SplashScreen.route) {
                         inclusive = true
                     }
                 }
             }
         }
         composable(route = Screens.LoginGraph.route) {
-            LoginGraph(parentNavController = navController)
+            LoginGraph(
+                onUserLoggedIn = { navController.navigate(Screens.MainGraph.route) }
+            )
         }
         composable(route = Screens.MainGraph.route) {
-            MainGraph()
+            MainGraph(
+                onUserLoggedOut = { navController.navigate(Screens.LoginGraph.route) }
+            )
         }
     }
 }

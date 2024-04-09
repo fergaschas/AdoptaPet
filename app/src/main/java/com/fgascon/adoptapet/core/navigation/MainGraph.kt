@@ -17,6 +17,7 @@ import com.fgascon.adoptapet.pet.presentation.PetDetailsViewModel
 
 @Composable
 fun MainGraph(
+    onUserLoggedOut: () -> Unit,
     navController: NavHostController = rememberNavController(),
 ) {
     NavHost(navController = navController, startDestination = Screens.HomeScreen.route) {
