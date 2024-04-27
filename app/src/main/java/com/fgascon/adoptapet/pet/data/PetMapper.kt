@@ -1,6 +1,7 @@
 package com.fgascon.adoptapet.pet.data
 
 import com.fgascon.adoptapet.pet.domain.Pet
+import com.fgascon.adoptapet.pet.domain.PetType
 import com.google.firebase.firestore.DocumentSnapshot
 
 fun DocumentSnapshot.toDomain(): Pet {
@@ -9,7 +10,8 @@ fun DocumentSnapshot.toDomain(): Pet {
         name = get("name").toString(),
         description = get("description").toString(),
         images = get("images") as List<String>,
-        type = "dog",
-        age = 5
+        type = PetType.DOG,
+        age = 5,
+        address = get("address").toString()
     )
 }

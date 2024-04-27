@@ -1,4 +1,4 @@
-package com.fgascon.adoptapet.map.presentation
+package com.fgascon.adoptapet.location.presentation
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.icons.Icons

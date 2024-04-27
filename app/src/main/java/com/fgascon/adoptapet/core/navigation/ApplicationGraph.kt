@@ -15,7 +15,7 @@ fun ApplicationGraph(
 
     NavHost(
         navController = navController,
-        startDestination = Screens.SplashScreen.route
+        startDestination = Screens.MainGraph.route
     ) {
         composable(route = Screens.SplashScreen.route) {
             SplashScreen {

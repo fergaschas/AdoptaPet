@@ -14,7 +14,8 @@ sealed class BottomNavItem(val label: String, val icon: ImageVector, val route: 
         Icons.Filled.Home,
         Screens.PetListScreen.route
     )
-    data object Map: BottomNavItem(
+
+    data object Map : BottomNavItem(
         "Map",
         Icons.Filled.LocationOn,
         Screens.MapScreen.route
@@ -24,5 +25,11 @@ sealed class BottomNavItem(val label: String, val icon: ImageVector, val route: 
         "Profile",
         Icons.Filled.Person,
         Screens.ProfileScreen.route
+    )
+
+    data object Landing : BottomNavItem(
+        "Landing",
+        Icons.Filled.Home,
+        Screens.LandingScreen.route
     )
 }

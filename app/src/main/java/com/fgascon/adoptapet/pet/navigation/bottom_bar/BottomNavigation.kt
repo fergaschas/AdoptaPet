@@ -13,6 +13,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 @Composable
 fun BottomNavigation(navController: NavHostController) {
     val navItems = listOf(
+        BottomNavItem.Landing,
         BottomNavItem.PetList,
         BottomNavItem.Map,
         BottomNavItem.Profile

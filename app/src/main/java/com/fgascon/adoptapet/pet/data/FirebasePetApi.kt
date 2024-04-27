@@ -1,15 +1,16 @@
 package com.fgascon.adoptapet.pet.data
 
 import com.google.firebase.firestore.DocumentSnapshot
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.QuerySnapshot
-import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.snapshots
-import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.flow.Flow
+import javax.inject.Inject
 
 
-class FirebasePetApi {
-    private val db = Firebase.firestore
+class FirebasePetApi @Inject constructor (
+    private val db :FirebaseFirestore
+){
 
     fun getPets(): Flow<QuerySnapshot> {
         return db.collection("pets").snapshots()

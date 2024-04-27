@@ -1,11 +1,14 @@
 [versions]
-agp = "8.3.1"
+agp = "8.3.2"
 coilCompose = "2.6.0"
-firebaseAnalytics = "21.6.1"
+datastorePreferences = "1.0.0"
+firebaseAnalytics = "21.6.2"
 firebaseAuth = "22.3.1"
-firebaseBom = "32.8.0"
-firebaseFirestore = "24.11.0"
+firebaseBom = "32.8.1"
+firebaseFirestore = "24.11.1"
 firebaseUiAuth = "8.0.2"
+hiltAndroid = "2.48"
+hiltNavigationCompose = "1.2.0"
 kotlin = "1.9.0"
 coreKtx = "1.12.0"
 junit = "4.13.2"
@@ -13,7 +16,7 @@ junitVersion = "1.1.5"
 espressoCore = "3.5.1"
 lifecycleRuntimeKtx = "2.7.0"
 activityCompose = "1.8.2"
-composeBom = "2024.03.00"
+composeBom = "2024.04.00"
 mapsCompose = "4.3.3"
 materialIconsExtendedAndroid = "1.6.5"
 playServicesAuth = "21.0.0"
@@ -27,6 +30,8 @@ secretsGradlePlugin = "2.0.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferences" }
+androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
 androidx-material-icons-extended-android = { module = "androidx.compose.material:material-icons-extended-android", version.ref = "materialIconsExtendedAndroid" }
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
 firebase-analytics = { module = "com.google.firebase:firebase-analytics", version.ref = "firebaseAnalytics" }
@@ -34,6 +39,8 @@ firebase-auth = { module = "com.google.firebase:firebase-auth", version.ref = "f
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
 firebase-firestore = { module = "com.google.firebase:firebase-firestore", version.ref = "firebaseFirestore" }
 firebase-ui-auth = { module = "com.firebaseui:firebase-ui-auth", version.ref = "firebaseUiAuth" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
+hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroid" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }

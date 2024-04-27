@@ -14,7 +14,7 @@ fun PetDetailsScreen(
     Column {
 
         Text(text = state.value.name)
-        Text(text = state.value.type)
+        Text(text = state.value.type.toString())
         Text(text = state.value.age.toString())
         Text(text = state.value.description)
 

@@ -4,8 +4,9 @@ data class Pet(
     val id: String,
     val name: String,
     val description: String,
+    val address: String,
     val images: List<String>,
-    val type: String,
+    val type: PetType,
     val age: Int,
 ) {
     companion object
@@ -16,6 +17,7 @@ fun emptyPet() = Pet(
     name = "",
     description = "",
     images = emptyList(),
-    type = "",
-    age = 0
+    type = PetType.DOG,
+    age = 0,
+    address = ""
 )

@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("com.google.gms.google-services")
     id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
+    id("com.google.dagger.hilt.android")
+    kotlin("kapt")
 }
 
 android {
@@ -58,6 +60,9 @@ android {
     }
 
 }
+kapt {
+    correctErrorTypes = true
+}
 
 dependencies {
 
@@ -93,5 +98,8 @@ dependencies {
 
     implementation(libs.play.services.maps)
     implementation (libs.maps.compose)
-
+    implementation(libs.androidx.datastore.preferences)
+    implementation(libs.hilt.android)
+    implementation(libs.androidx.hilt.navigation.compose)
+    kapt(libs.hilt.android.compiler)
 }

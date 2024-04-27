@@ -23,4 +23,7 @@ sealed class Screens (
     data object PetListScreen : Screens("pet_list")
     data object MapScreen : Screens("map")
     data object ProfileScreen : Screens("profile")
+
+    data object LandingScreen : Screens("landing")
+    data object ChangeLocationScreen : Screens("change_location")
 }

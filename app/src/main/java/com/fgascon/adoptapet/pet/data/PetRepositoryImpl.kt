@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
 class PetRepositoryImpl(
-    private val firebasePetApi: FirebasePetApi = FirebasePetApi()
+    private val firebasePetApi: FirebasePetApi
 ) : PetRepository {
     override suspend fun getPets(): Flow<List<Pet>> {
         return firebasePetApi.getPets().map { list ->
